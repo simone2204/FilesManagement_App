@@ -44,3 +44,11 @@ This project is a desktop application developed in Python with Tkinter for manag
 - Poppler e Tesseract OCR installati localmente.
 
 ---
+
+## Configurazione
+
+1. Salvare il **token API Hugging Face/OpenAI** in un file di testo (es. `HF_API_TOKEN.txt`).
+2. Modificare il percorso del file token nel codice:
+
+```python
+HF_API_TOKEN = "C:/percorso/del/file/HF_API_TOKEN.txt"
