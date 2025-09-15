@@ -624,7 +624,7 @@ class FileUploaderApp:
                         ricerca in cf_cliente.upper()):
                     self.listbox_clienti.insert(tk.END, cliente_id)
 
-    # Questo è il metodo mancante che devi aggiungere
+    
     def run_pages_research(self):
         """ Avvia la ricerca per parole chiave. """
         if not self.cliente_selezionato:
@@ -668,7 +668,7 @@ class FileUploaderApp:
         thread.status_var = self.status_var
         thread.start()
 
-    # Questo è il metodo di callback che devi aggiungere
+    
     def on_research_pages_completed(self, risultato):
         """ Gestisce il risultato della ricerca. """
         self.progress_var.set(100)
@@ -703,4 +703,5 @@ if __name__ == "__main__":
     app = FileUploaderApp(root)
 
     root.mainloop()
+
 
