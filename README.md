@@ -41,7 +41,7 @@ This project is a desktop application developed in Python with Tkinter for manag
 - [pytesseract](https://pypi.org/project/pytesseract/)
 - [Requests](https://pypi.org/project/requests/)
 - [OpenAI Python SDK](https://pypi.org/project/openai/)
-- Poppler e Tesseract OCR installati localmente.
+- 'Poppler' e 'Tesseract OCR' installed locally.
 
 ---
 
@@ -52,4 +52,5 @@ This project is a desktop application developed in Python with Tkinter for manag
 
 ```python
 HF_API_TOKEN = "C:/percorso/del/file/HF_API_TOKEN.txt"
+
 
