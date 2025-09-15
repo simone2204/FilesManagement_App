@@ -51,6 +51,4 @@ This project is a desktop application developed in Python with Tkinter for manag
 2. Change the token file path in the code:
 
 ```python
-HF_API_TOKEN = "C:/percorso/del/file/HF_API_TOKEN.txt"
-
-
+HF_API_TOKEN = "C:/your/personal/route/HF_API_TOKEN.txt"
