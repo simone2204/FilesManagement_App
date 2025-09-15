@@ -31,3 +31,16 @@ This project is a desktop application developed in Python with Tkinter for manag
   - PDF analysis and AI calls performed in separate threads to keep the interface responsive.
 
 ---
+
+## Dipendenze
+
+- Python 3.x
+- [Tkinter](https://docs.python.org/3/library/tkinter.html)
+- [PyPDF2](https://pypi.org/project/PyPDF2/)
+- [pdf2image](https://pypi.org/project/pdf2image/)
+- [pytesseract](https://pypi.org/project/pytesseract/)
+- [Requests](https://pypi.org/project/requests/)
+- [OpenAI Python SDK](https://pypi.org/project/openai/)
+- Poppler e Tesseract OCR installati localmente.
+
+---
