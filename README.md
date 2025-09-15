@@ -32,7 +32,7 @@ This project is a desktop application developed in Python with Tkinter for manag
 
 ---
 
-## Dipendenze
+## Dependencies
 
 - Python 3.x
 - [Tkinter](https://docs.python.org/3/library/tkinter.html)
@@ -45,10 +45,11 @@ This project is a desktop application developed in Python with Tkinter for manag
 
 ---
 
-## Configurazione
+## Configuration
 
-1. Salvare il **token API Hugging Face/OpenAI** in un file di testo (es. `HF_API_TOKEN.txt`).
-2. Modificare il percorso del file token nel codice:
+1. Save the **Hugging Face/OpenAI API token** in a text file (e.g. `HF_API_TOKEN.txt`).
+2. Change the token file path in the code:
 
 ```python
 HF_API_TOKEN = "C:/percorso/del/file/HF_API_TOKEN.txt"
+
