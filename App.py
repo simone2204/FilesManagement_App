@@ -8,7 +8,7 @@ import pytesseract
 import requests
 from openai import OpenAI
 
-HF_API_TOKEN = "C:/Users/simo-/OneDrive/Desktop/api token/HF_API_TOKEN.txt" # SAVE IT IN THE SYSTEM THEN ACCESS WITH 'OS'
+HF_API_TOKEN = "C:/your/personal/route//HF_API_TOKEN.txt" # SAVE IT IN THE SYSTEM THEN ACCESS WITH 'OS'
 # Leggi il token dal file
 try:
     with open(HF_API_TOKEN , "r") as f:
@@ -701,4 +701,5 @@ class FileUploaderApp:
 if __name__ == "__main__":
     root = tk.Tk()
     app = FileUploaderApp(root)
+
     root.mainloop()
