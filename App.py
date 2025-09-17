@@ -8,15 +8,16 @@ import pytesseract
 import requests
 from openai import OpenAI
 
+# HuggingFace Api Token if you have
 HF_API_TOKEN = "C:/your/personal/route/HF_API_TOKEN.txt" # OR SAVE IT IN THE SYSTEM THEN ACCESS WITH 'OS'
-# Leggi il token dal file
+
 try:
     with open(HF_API_TOKEN , "r") as f:
-        HF_API_TOKEN = f.read().strip()  # strip() rimuove eventuali spazi o ritorni a capo
+        HF_API_TOKEN = f.read().strip()
 except FileNotFoundError:
     raise FileNotFoundError(f"File token non trovato: {HF_API_TOKEN}")
 
-# Verifica
+# Verify
 if not HF_API_TOKEN:
     raise ValueError("Il token è vuoto nel file!")
 HF_MODEL = "meta-llama/Llama-3.2-3B-Instruct" # meta-llama/Llama-3.1-8B-Instruct - meta-llama/Llama-3.3-70B-Instruct - meta-llama/Llama-3.2-3B-Instruct
@@ -132,7 +133,7 @@ class AIExtractThread(threading.Thread):
         self.file_path = file_path
         self.lang = lang
         self.callback = callback
-        self.block_max_tokens = block_max_tokens  # Numero massimo di token per blocco
+        self.block_max_tokens = block_max_tokens
 
     def run(self):
         try:
@@ -150,7 +151,7 @@ class AIExtractThread(threading.Thread):
                 self.root.after(0, self.callback, None, "Nessun testo rilevato nel PDF.")
                 return
 
-            # Suddividi in blocchi gestibili
+            # Suddividi in blocchi gestibil
             blocchi = self.suddividi_blocchi(testo_completo, self.block_max_tokens)
 
             # Analizza ogni blocco con AI e raccogli i risultati
@@ -160,7 +161,7 @@ class AIExtractThread(threading.Thread):
                 summary_blocco = self.genera_riassunto_ai(blocco)
                 risultati_blocchi.append(summary_blocco)
 
-            # 4Combina i riassunti finali
+            # Combina i riassunti finali
             riassunto_finale = "\n\n".join(risultati_blocchi)
             self.root.after(0, self.callback, riassunto_finale, None)
 
@@ -703,5 +704,6 @@ if __name__ == "__main__":
     app = FileUploaderApp(root)
 
     root.mainloop()
+
 
 
